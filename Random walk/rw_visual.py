@@ -9,7 +9,8 @@ while True:
     # нанесение точек на диаграмму
     plt.style.use('classic')
     fig, ax = plt.subplots()
-    ax.scatter(rw.x_values, rw.y_values, s=15)
+    point_numbers = range(rw.num_point)
+    ax.scatter(rw.x_values, rw.y_values, c=point_numbers, cmap=plt.cm.Reds, edgecolor='none', s=15)
 
     plt.show()
 
