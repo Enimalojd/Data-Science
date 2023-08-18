@@ -1,8 +1,9 @@
 import matplotlib.pyplot as plt
 
+input_valuus = [1, 2, 3, 4, 5]
 squares = [1, 4, 9, 16, 25]
 fig, ax = plt.subplots()
-ax.plot(squares, linewidth=3)
+ax.plot(input_valuus ,squares, linewidth=3)
 
 #назначение заголовка диаграммы и меток осей
 ax.set_title("Square Numbers", fontsize=24)
