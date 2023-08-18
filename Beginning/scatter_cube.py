@@ -11,4 +11,4 @@ ax.set_xlabel("Value", fontsize=14)
 ax.set_ylabel("Cube of Value", fontsize=14)
 ax.tick_params(axis='both', which='major', labelsize=14)
 
-plt.savefig('cube_plot.png')
+plt.savefig('images/cube_plot.png')
