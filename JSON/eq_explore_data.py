@@ -14,14 +14,10 @@ with open(readable_file, 'w') as f:
 all_eq_dict = all_eq_data['features']
 mags, lons, lats, hover_text = [], [], [], []
 for eq_dict in all_eq_dict:
-    mag = eq_dict['properties']['mag']
-    lon = eq_dict['geometry']['coordinates'][0]
-    lat = eq_dict['geometry']['coordinates'][1]
-    title = eq_dict['properties']['title']
-    mags.append(mag)
-    lons.append(lon)
-    lats.append(lat)
-    hover_text.append(title)
+    mags.append(eq_dict['properties']['mag'])
+    lons.append(eq_dict['geometry']['coordinates'][0])
+    lats.append(eq_dict['geometry']['coordinates'][1])
+    hover_text.append(eq_dict['properties']['title'])
 
 #нанесение данных на карту
 data = [{
@@ -37,7 +33,7 @@ data = [{
             'colorbar': {'title': 'Magnitude'},
     }
 }]
-my_layout = Layout(title='Global Earthquakes')
+my_layout = Layout(title=f"{all_eq_data['metadata']['title']}")
 
 fig = {'data': data, 'layout': my_layout}
 offline.plot(fig,filename='images/global_earthquakes30.html')
