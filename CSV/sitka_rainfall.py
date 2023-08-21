@@ -24,8 +24,8 @@ with open(filename) as f:
 #нанесение данных на диаграмму
 plt.style.use('seaborn')
 fig, ax = plt.subplots()
-ax.plot(dates, precipitations, c='red', alpha=0.5)
-plt.fill_between(dates, precipitations, facecolor='blue', alpha=0.5)
+ax.plot(dates, precipitations, c='red', alpha=1)
+#plt.fill_between(dates, precipitations, facecolor='blue', alpha=0.5)
 plt.title('Rainfall on Sitka 2021 year', fontsize=24)
 plt.xlabel('', fontsize=16)
 fig.autofmt_xdate()
